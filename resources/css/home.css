@@ -1,0 +1,234 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+#logo {
+    height: 30px;
+    width: 120px;
+}
+
+#logo img {
+    height: 100%;
+}
+
+#logo-bar {
+    display: grid;
+    grid-template-columns: auto 120px auto;
+    margin: 20px 0px;
+}
+
+#logo-bar .search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#logo-bar .search div {
+    margin-right: 10%;
+}
+
+#logo-bar .search div button {
+    font-size: 150%;
+    margin: 0px 10px;
+}
+
+#main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-menu .menu-bar .menu-item {
+    margin: 5px;
+    padding: 10px 5px;
+}
+
+#main-menu .menu-bar li span {
+    padding: 10px 5px;
+}
+
+#main-menu .menu-bar li li span {
+    border-bottom: 1px solid whitesmoke;
+    border-top: 1px solid whitesmoke;
+    width: 100%;
+    display: block;
+}
+
+#main-menu .menu-bar li span:hover {
+    color: rgb(122, 122, 245);
+    border-bottom: 2px solid black;
+}
+
+#main-menu .drop-down-content {
+    padding: 10px 10px 10px 0px;
+    width: 150px;
+    background: white;
+}
+
+#main-menu .slide-content {
+    width: 150px;
+    background: white;
+}
+
+#main-menu .slide-content span {
+    display: block;
+}
+
+#main-menu .menu-bar li span.active {
+    border-bottom: 2px solid black;
+}
+
+:root {
+    --height: 700px;
+}
+
+.slides {
+    padding: 0;
+    width: 100%;
+    height: var(--height);
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide-container {
+    display: block;
+}
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: var(--height);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: absolute;
+    transform: translateX(100%);
+    transition: all .7s ease-in-out;
+}
+
+.slides .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slides .nav label {
+    padding: 20px;
+    display: none;
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+    transition: opacity .2s;
+    color: #FFF;
+    font-size: 150px;
+    text-align: center;
+    line-height: calc(var(--height));
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slides .slide:hover+.nav label {
+    opacity: 0.5;
+}
+
+.slides .nav label:hover {
+    opacity: 1;
+}
+
+.slides .nav .next {
+    right: 0;
+}
+
+.slides input:checked+.slide-container .slide {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 1s ease-in-out;
+}
+
+.slides input:checked+.slide-container .nav label {
+    display: block;
+}
+
+.slides .nav-dots {
+    width: 100%;
+    bottom: 9px;
+    height: 11px;
+    display: block;
+    position: absolute;
+    text-align: center;
+}
+
+.slides .nav-dots .nav-dot {
+    top: -5px;
+    width: 11px;
+    height: 11px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.slides .nav-dots .nav-dot:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slides input#img-1:checked~.nav-dots label#img-dot-1,
+.slides input#img-2:checked~.nav-dots label#img-dot-2,
+.slides input#img-3:checked~.nav-dots label#img-dot-3 {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#index .product {
+    position: relative;
+    margin: 0px 5%;
+}
+
+#index .product div {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    padding-top: 20px;
+    background-color: black;
+    opacity: 0.7;
+}
+
+#index .product div span {
+    color: white;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+#index .product div a {
+    cursor: pointer;
+    padding: 5px 15px;
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+    width: fit-content;
+}
