@@ -7,9 +7,16 @@
     <link rel="stylesheet" href="resources/css/home.css">
     <link rel="stylesheet" href="vendors/css/all.min.css">
 
+    <link rel="stylesheet" href="vendors/slick/slick.css">
+    <link rel="stylesheet" href="vendors/slick/slick-theme.css">
+
+
     <script src="vendors/js/all.min.js"></script>
     <script src="vendors/js/jquery-3.6.0.js"></script>
+    <script src="vendors/slick/slick.min.js"></script>
+
     <script src="resources/js/functions.js"></script>
+
 
 
     <meta charset="UTF-8">
@@ -67,13 +74,11 @@
                         <span>Giới thiệu</span>
                     </li>
                     <li class="menu-item drop-down-menu">
-                        <span>Tin tức</span>
-                        <i class="fa fa-chevron-down"></i>
+                        <span>Tin tức<i class="fa fa-chevron-down"></i></span>
+
                     </li>
                     <li class="menu-item">
-                        <span>Sale đồ nam</span>
-
-                        <i class="fa fa-chevron-down"></i>
+                        <span>Sale đồ nam<i class="fa fa-chevron-down"></i></span>
                     </li>
                     <li class="menu-item">
                         <span>Tuyển dụng</span>
@@ -84,111 +89,164 @@
                     </li>
                 </ul>
             </div>
+
+        </header>
+        <section>
             <div id="wall-img">
                 <img class="max-width" src="resources/img/slideshow_1.jpg">
             </div>
-            <div id="index">
-                <h1 class="max-width ta-center padding">DANH MỤC SẢN PHẨM</h1>
-                <ul class="slides">
-                    <input type="radio" name="radio-btn" id="img-1" checked />
-                    <li class="slide-container">
-                        <div class="slide">
-                            <div class="product">
-                                <img src="resources/img/1_ae7b6d045fa8479183e6092b6457e503_grande.jpg">
-                                <div>
-                                    <span>Áo Phông</span>
-                                    <a href="function:void(0)">Xem ngay</a>
-                                </div>
-                            </div>
-                            <div class="product">
-                                <img src="resources/img/1_ae7b6d045fa8479183e6092b6457e503_grande.jpg">
-                                <div>
-                                    <span>Áo Phông</span>
-                                    <a href="function:void(0)">Xem ngay</a>
-                                </div>
-                            </div>
-                            <div class="product">
-                                <img src="resources/img/1_ae7b6d045fa8479183e6092b6457e503_grande.jpg">
-                                <div>
-                                    <span>Áo Phông</span>
-                                    <a href="function:void(0)">Xem ngay</a>
-                                </div>
-                            </div>
+        </section>
+        <section id="dm-sanpham">
+            <h1 class="max-width ta-center padding title">Danh mục sản phẩm</h1>
+            <div class="center slider">
+                <div>
+                    <div class="product">
+                        <img src="resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                        <div>
+                            <span>Áo Phông</span>
+                            <a>Xem ngay</a>
                         </div>
-                        <div class="nav">
-                            <label for="img-6" class="prev">&#x2039;</label>
-                            <label for="img-2" class="next">&#x203a;</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="product">
+                        <img src="resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                        <div>
+                            <span>Áo Phông</span>
+                            <a>Xem ngay</a>
                         </div>
-                    </li>
-                    <input type="radio" name="radio-btn" id="img-2" />
-                    <li class="slide-container">
-                        <div class="slide">
-                            <div class="product">
-                                <img src="resources/img/1_ae7b6d045fa8479183e6092b6457e503_grande.jpg">
-                                <div>
-                                    <span>Áo Phông</span>
-                                    <a href="function:void(0)">Xem ngay</a>
-                                </div>
-                            </div>
-                            <div class="product">
-                                <img src="resources/img/1_ae7b6d045fa8479183e6092b6457e503_grande.jpg">
-                                <div>
-                                    <span>Áo Phông</span>
-                                    <a href="function:void(0)">Xem ngay</a>
-                                </div>
-                            </div>
-                            <div class="product">
-                                <img src="resources/img/1_ae7b6d045fa8479183e6092b6457e503_grande.jpg">
-                                <div>
-                                    <span>Áo Phông</span>
-                                    <a href="function:void(0)">Xem ngay</a>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="product">
+                        <img src="resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                        <div>
+                            <span>Áo Phông</span>
+                            <a>Xem ngay</a>
                         </div>
-                        <div class="nav">
-                            <label for="img-1" class="prev">&#x2039;</label>
-                            <label for="img-3" class="next">&#x203a;</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="product">
+                        <img src="resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                        <div>
+                            <span>Áo Phông</span>
+                            <a>Xem ngay</a>
                         </div>
-                    </li>
-                    <input type="radio" name="radio-btn" id="img-3" />
-                    <li class="slide-container">
-                        <div class="slide">
-                            <div class="product">
-                                <img src="resources/img/1_ae7b6d045fa8479183e6092b6457e503_grande.jpg">
-                                <div>
-                                    <span>Áo Phông</span>
-                                    <a href="function:void(0)">Xem ngay</a>
-                                </div>
-                            </div>
-                            <div class="product">
-                                <img src="resources/img/1_ae7b6d045fa8479183e6092b6457e503_grande.jpg">
-                                <div>
-                                    <span>Áo Phông</span>
-                                    <a href="function:void(0)">Xem ngay</a>
-                                </div>
-                            </div>
-                            <div class="product">
-                                <img src="resources/img/1_ae7b6d045fa8479183e6092b6457e503_grande.jpg">
-                                <div>
-                                    <span>Áo Phông</span>
-                                    <a href="function:void(0)">Xem ngay</a>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="product">
+                        <img src="resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                        <div>
+                            <span>Áo Phông</span>
+                            <a>Xem ngay</a>
                         </div>
-                        <div class="nav">
-                            <label for="img-2" class="prev">&#x2039;</label>
-                            <label for="img-1" class="next">&#x203a;</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="product">
+                        <img src="resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                        <div>
+                            <span>Áo Phông</span>
+                            <a>Xem ngay</a>
                         </div>
-                    </li>
-
-                    <li class="nav-dots">
-                        <label for="img-1" class="nav-dot" id="img-dot-1"></label>
-                        <label for="img-2" class="nav-dot" id="img-dot-2"></label>
-                        <label for="img-3" class="nav-dot" id="img-dot-3"></label>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="product">
+                        <img src="resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                        <div>
+                            <span>Áo Phông</span>
+                            <a>Xem ngay</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="product">
+                        <img src="resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                        <div>
+                            <span>Áo Phông</span>
+                            <a>Xem ngay</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="product">
+                        <img src="resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                        <div>
+                            <span>Áo Phông</span>
+                            <a>Xem ngay</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </header>
+        </section>
+        <section id="dm-sale">
+            <h1 class="max-width ta-center padding title">SALE THHÁNG 3 | SALE TẤT CẢ ĐỒ ĐÔNG LÊN ĐẾN 50%</h1>
+            <div class="center slider">
+                <div>
+                    <div class="product">
+                        <img src="resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                        <span class="sale">30%</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="product">
+                        <img src="resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                        <span class="sale">30%</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="product">
+                        <img src="resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                        <span class="sale">30%</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="product">
+                        <img src="resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                        <span class="sale">30%</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="product">
+                        <img src="resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                        <span class="sale">30%</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="product">
+                        <img src="resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                        <span class="sale">30%</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="product">
+                        <img src="resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                        <span class="sale">30%</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="product">
+                        <img src="resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                        <span class="sale">30%</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="product">
+                        <img src="resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                        <span class="sale">30%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="searchbox" class="right-nav">
+
+    </div>
+    <div id="cartbox" class="right-nav">
+
     </div>
 </body>
 
