@@ -47,11 +47,12 @@ body {
 
 #main-menu .menu-bar .menu-item {
     margin: 5px;
-    padding: 10px 5px;
 }
 
 #main-menu .menu-bar li span {
     padding: 10px 5px;
+    display: block;
+    font-size: 1.5vw;
 }
 
 #main-menu .menu-bar li li span {
@@ -326,4 +327,74 @@ body {
     grid-template-columns: auto auto auto auto auto;
     grid-gap: 30px;
     padding: 15px;
+}
+
+footer .registry form {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #f3f3f3;
+    padding: 15px;
+}
+
+footer .registry form input {
+    outline: none;
+    border: none;
+    background: white;
+    padding: 15px;
+    width: 40%;
+}
+
+footer .infomation {
+    display: grid;
+    grid-template-columns: auto 15% 30% 20%;
+    grid-gap: 20px;
+    width: 100%;
+    padding: 10px;
+}
+
+footer img {
+    width: 100%;
+}
+
+footer .infomation .info {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .infomation .info img {
+    width: 35%;
+}
+
+.search-input {
+    background-color: whitesmoke;
+    padding: 0px 10px;
+    display: flex;
+}
+
+.search-input * {
+    border: none;
+    background-color: whitesmoke;
+    outline: none;
+}
+
+.search-input input {
+    height: 100%;
+    width: 100%;
+    line-height: 100%;
+    padding: 15px 5px;
+    font-size: 1vw;
+}
+
+.search-input button {
+    padding: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    #trending .container {
+        grid-template-columns: auto auto auto;
+    }
+    footer .infomation {
+        grid-template-columns: auto auto;
+    }
 }
