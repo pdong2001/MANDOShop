@@ -124,6 +124,10 @@
     justify-content: center;
 }
 
+.jc-spbt {
+    justify-content: space-between;
+}
+
 .ai-center {
     align-items: center;
 }
@@ -206,6 +210,21 @@
 
 .bdr-sm {
     border-radius: 5%;
+}
+
+.bdr-circle {
+    border-radius: 100%;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle span {
+    position: absolute;
+    border-radius: 100%;
 }
 
 .bd-solid {
@@ -301,14 +320,20 @@
 .slider .slick-prev:before,
 .slider .slick-next:before {
     color: black;
+    border-radius: 100%;
+    border: 2px solid whitesmoke;
+    padding: 20px;
+    background-color: white;
 }
 
 .slider .slick-next {
-    right: 20px;
+    right: 50px;
+    z-index: 1;
 }
 
 .slider .slick-prev {
     left: 20px;
+    z-index: 1;
 }
 
 .slick-slide {
@@ -322,4 +347,65 @@
 
 .slick-current {
     opacity: 1;
+}
+
+footer .registry form {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #f3f3f3;
+    padding: 15px;
+}
+
+footer .registry form input {
+    outline: none;
+    border: none;
+    background: white;
+    padding: 15px;
+    width: 40%;
+}
+
+footer .infomation {
+    display: grid;
+    grid-template-columns: auto 15% 30% 20%;
+    grid-gap: 20px;
+    width: 100%;
+    padding: 10px;
+}
+
+footer img {
+    width: 100%;
+}
+
+footer .infomation .info {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .infomation .info img {
+    width: 35%;
+}
+
+.search-input {
+    background-color: whitesmoke;
+    padding: 0px 10px;
+    display: flex;
+}
+
+.search-input * {
+    border: none;
+    background-color: whitesmoke;
+    outline: none;
+}
+
+.search-input input {
+    height: 100%;
+    width: 100%;
+    line-height: 100%;
+    padding: 15px 5px;
+    font-size: 1vw;
+}
+
+.search-input button {
+    padding: 15px;
 }

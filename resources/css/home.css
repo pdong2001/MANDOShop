@@ -5,6 +5,7 @@ html {
 body {
     background-color: #ffffff;
     overflow: hidden;
+    height: 100%;
 }
 
 #logo {
@@ -29,7 +30,7 @@ body {
 }
 
 #logo-bar .search div {
-    margin-right: 10%;
+    margin-right: 10vw;
 }
 
 #logo-bar .search div button {
@@ -61,7 +62,7 @@ body {
 }
 
 #main-menu .menu-bar li span:hover {
-    color: rgb(122, 122, 245);
+    color: cyan;
     border-bottom: 2px solid black;
 }
 
@@ -94,15 +95,21 @@ body {
     border-bottom: 2px solid black;
 }
 
-.slider .product {
+.product {
     position: relative;
+}
+
+.product .name:hover {
+    color: cyan;
+    transition: all .3s;
 }
 
 .product img {
     cursor: pointer;
+    width: 100%;
 }
 
-.slider .product div {
+.product div {
     position: absolute;
     bottom: 0px;
     display: flex;
@@ -124,13 +131,13 @@ body {
     background-color: white;
 }
 
-.slider .product div span {
+.product div span {
     color: white;
     font-size: 1.5vw;
     font-weight: bold;
 }
 
-.slider .product div a {
+.product div a {
     cursor: pointer;
     padding: 5px 15px;
     margin-top: 10px;
@@ -157,6 +164,10 @@ body {
         transform: translate(-50%, -100%);
         opacity: 0;
     }
+}
+
+.search {
+    z-index: 2;
 }
 
 .search div:hover button:last-child span {
@@ -187,4 +198,132 @@ body {
 
 .slider img {
     width: 100%;
+}
+
+#cartbox .c-product {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#cartbox .c-product div img {
+    width: 100%;
+}
+
+#cartbox .c-product div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+#cartbox .c-product .name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 10px;
+    width: 100%;
+}
+
+#cartbox .c-product .name .size {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    padding: 10px 0px;
+    font-weight: bold;
+    opacity: .6;
+}
+
+#cartbox .c-product .name h3 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+}
+
+#cartbox .c-product .name .amount {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+}
+
+#cartbox .c-product .count {
+    padding: 5px 15px;
+    border: 1px solid black;
+    width: fit-content;
+}
+
+#cartbox .c-product .price {
+    margin: 0px 20px;
+}
+
+#cartbox .c-product div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cartbox .c-product div:last-child button {
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#cartbox .ctn {
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: fit-content;
+}
+
+.right-nav .container {
+    padding: 20px;
+}
+
+.right-nav {
+    width: 0px;
+    display: none;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    background-color: white;
+}
+
+.right-nav .controller {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 5%;
+}
+
+.right-nav .controller button {
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.coverlay {
+    background-color: black;
+    opacity: .6;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: none;
+}
+
+#trending .container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 30px;
+    padding: 15px;
 }
