@@ -283,3 +283,43 @@
 .slide-menu:hover .slide-content {
     display: block;
 }
+
+.slider {
+    margin: 10px auto;
+}
+
+#dm-sanpham .slick-slide {}
+
+#dm-sale .slick-slide {
+    margin: 0px 10px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slider .slick-prev:before,
+.slider .slick-next:before {
+    color: black;
+}
+
+.slider .slick-next {
+    right: 20px;
+}
+
+.slider .slick-prev {
+    left: 20px;
+}
+
+.slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+}
+
+.slick-active {
+    opacity: 1;
+}
+
+.slick-current {
+    opacity: 1;
+}
