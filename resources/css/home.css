@@ -121,7 +121,7 @@ body {
     display: grid;
     grid-template-columns: auto auto auto;
     position: absolute;
-    transform: translateX(100%);
+    transform: scale(0);
     transition: all .7s ease-in-out;
 }
 
@@ -161,7 +161,7 @@ body {
 
 .slides input:checked+.slide-container .slide {
     opacity: 1;
-    transform: translateX(0%);
+    transform: scale(1);
     transition: opacity 1s ease-in-out;
 }
 
