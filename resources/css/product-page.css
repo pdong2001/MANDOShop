@@ -1,0 +1,46 @@
+#product-page .info {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+#product-page .img {
+    width: 60%;
+}
+
+#product-page .info form {
+    padding: 10px;
+    border: 1px solid;
+    margin: 10px 0px;
+}
+
+#product-page span {
+    padding: 20px 0px;
+}
+
+#product-page .img img {
+    width: 100%;
+}
+
+#product-page .img {
+    display: flex;
+    flex-direction: column;
+}
+
+#product-page {
+    z-index: 1;
+    padding: 30px 5%;
+}
+
+#product-page .info button {
+    outline: none;
+    border: none;
+    background: rgb(109, 109, 255);
+    color: white;
+    padding: 10px;
+}
+
+#product-page button {
+    margin: 10px 0px;
+    cursor: pointer;
+}
