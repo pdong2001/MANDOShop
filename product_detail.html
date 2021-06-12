@@ -17,7 +17,7 @@
 
     <script src="resources/js/functions.js"></script>
 
-
+    <script src="resources/js/cart.js"></script>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,6 +26,22 @@
 </head>
 
 <body class="scroll-hidden">
+    <div class="c-product temp">
+        <div>
+            <img src="resources/img/10cbf80bbc89450c9e9e2b733e55e968_bd01b557152f4a3591403abc1c120321_grande.png">
+        </div>
+        <div class="name">
+            <h3>Áo phông nam chất đẹp</h3>
+            <span class="size">XL</span>
+            <div class="amount">
+                <span class="count">1</span>
+                <span class="price">450.000đ</span>
+            </div>
+        </div>
+        <div>
+            <button>X</button>
+        </div>
+    </div>
     <div></div>
     <div id="main-body">
         <header>
@@ -41,7 +57,14 @@
                         <i class="fas fa-search"></i>
                         </button>
                         <button class="no-bd-btn">
-                        <i class="fas fa-shopping-bag"></i>
+                            <svg version="1.1" class="svg-cart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 27" style="enable-background:new 0 0 24 27;" xml:space="preserve">
+                                <g>
+                                    <path d="M0,6v21h24V6H0z M22,25H2V8h20V25z"></path>
+                                </g>
+                                <g>
+                                    <path d="M12,2c3,0,3,2.3,3,4h2c0-2.8-1-6-5-6S7,3.2,7,6h2C9,4.3,9,2,12,2z"></path>
+                                </g>
+                            </svg>
                         <span>0</span>
                         </button>
                     </div>
@@ -50,82 +73,82 @@
             <div id="main-menu">
                 <ul class="menu-bar">
                     <li class="menu-item">
-                        <span>Trang chủ</span>
+                        <a href="index.html">Trang chủ</a>
                     </li>
                     <li class="menu-item drop-down-menu">
-                        <span>Đồ nam<i class="fa fa-chevron-down"></i></span>
+                        <a>Đồ nam<i class="fa fa-chevron-down"></i></a>
                         <ul class="drop-down-content">
                             <li class="slide-menu">
-                                <span>Áo</span>
+                                <a>Áo</a>
                                 <ul class="slide-content">
                                     <li>
-                                        <span>Áo phông</span>
+                                        <a>Áo phông</a>
                                     </li>
                                     <li>
-                                        <span>Áo Tanktop</span>
+                                        <a>Áo Tanktop</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="slide-menu">
-                                <span>Quần</span>
+                                <a>Quần</a>
                                 <ul class="slide-content">
                                     <li>
-                                        <span>Quần jean</span>
+                                        <a>Quần jean</a>
                                     </li>
                                     <li>
-                                        <span>Quẩn caro</span>
+                                        <a>Quẩn caro</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="slide-menu">
-                                <span>Giàu/dép</span>
+                                <a>Giàu/dép</a>
                                 <ul class="slide-content">
                                     <li>
-                                        <span>Giầy snaker</span>
+                                        <a>Giầy snaker</a>
                                     </li>
                                     <li>
-                                        <span>Giầy da</span>
+                                        <a>Giầy da</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="slide-menu">
-                                <span>Phụ kiện</span>
+                                <a>Phụ kiện</a>
                                 <ul class="slide-content">
                                     <li>
-                                        <span>Ví</span>
+                                        <a>Ví</a>
                                     </li>
                                     <li>
-                                        <span>Balo</span>
+                                        <a>Balo</a>
                                     </li>
                                     <li>
-                                        <span>Mũ</span>
+                                        <a>Mũ</a>
                                     </li>
                                     <li>
-                                        <span>Thắt lưng</span>
+                                        <a>Thắt lưng</a>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
                     <li class="menu-item">
-                        <span>Cửa hàng</span>
+                        <a>Cửa hàng</a>
                     </li>
                     <li class="menu-item">
-                        <span>Giới thiệu</span>
+                        <a>Giới thiệu</a>
                     </li>
                     <li class="menu-item drop-down-menu">
-                        <span>Tin tức<i class="fa fa-chevron-down"></i></span>
+                        <a>Tin tức<i class="fa fa-chevron-down"></i></a>
 
                     </li>
                     <li class="menu-item">
-                        <span>Sale đồ nam<i class="fa fa-chevron-down"></i></span>
+                        <a>Sale đồ nam<i class="fa fa-chevron-down"></i></a>
                     </li>
                     <li class="menu-item">
-                        <span>Tuyển dụng</span>
+                        <a>Tuyển dụng</a>
 
                     </li>
                     <li class="menu-item">
-                        <span>Bảng size</span>
+                        <a>Bảng size</a>
                     </li>
                 </ul>
             </div>
@@ -140,30 +163,39 @@
                 <div class="info">
                     <h3>Áo Khoác Gió Nam - KGN001</h3>
                     <hr color="#f5f5f5">
-                    <span class="opacity">SKU: KGN001-1</span>
-                    <div>
-                        <span class="red">-30%</span>
-                        <span class="bold">315.000đ</span>
+                    <span class="opacity code">SKU: KGN001-1</span>
+                    <div class="price-block">
+                        <span class="red discount">-30%</span>
+                        <span class="discount-price bold red">220.000đ</span>
+                        <span class="price">315.000đ</span>
                     </div>
                     <div>
                         <form class="color">
-                            <label class="red bold" for="color-1">Đỏ</label>
+                            <span class="chose-color"></span>
                             <input type="radio" id="color-1" name="color">
-                            <label class="black bold" for="color-2">Đen</label>
+                            <label for="color-1">
+                                <div class="bg-red">Đỏ</div>
+                            </label>
                             <input type="radio" id="color-2" name="color">
+                            <label for="color-2">
+                                <div class="bg-black">Đen</div>
+                            </label>
                         </form>
                         <form class="size">
-                            <label for="size-1">M</label>
                             <input type="radio" id="size-1" name="size">
-                            <label for="size-2">L</label>
+                            <label for="size-1">M</label>
                             <input type="radio" id="size-2" name="size">
+                            <label for="size-2">L</label>
                         </form>
                         <div class="quantity">
-                            <span></span>
-                            <input class="count" type="text">
+                            <form>
+                                <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                                <input type="number" id="number" value="1" />
+                                <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                            </form>
                         </div>
                     </div>
-                    <button>Thêm vào giỏ hàng</button>
+                    <button id="btnAdd">Thêm vào giỏ hàng</button>
                     <div class="descrtiption">
                         <p>
                             Mô tả<br> Màu sắc: Be, Đen<br><br> Họa tiết: Chữ in<br><br> Chất liệu: Cotton<br><br> Size: M, L, XL, XXL<br><br><br> Thiết kế basic cho bạn nhiều lựa chọn phối đồ với nhiều phong cách khác nhau. Các cậu có thể mix cùng một
@@ -201,22 +233,7 @@
             </button>
             </div>
             <div class="ctn">
-                <div class="c-product temp">
-                    <div>
-                        <img src="resources/img/10cbf80bbc89450c9e9e2b733e55e968_bd01b557152f4a3591403abc1c120321_grande.png">
-                    </div>
-                    <div class="name">
-                        <h3>Áo phông nam chất đẹp</h3>
-                        <span class="size">XL</span>
-                        <div class="amount">
-                            <span class="count">1</span>
-                            <span class="price">450.000đ</span>
-                        </div>
-                    </div>
-                    <div>
-                        <button>X</button>
-                    </div>
-                </div>
+
                 <div class="bill">
 
                 </div>

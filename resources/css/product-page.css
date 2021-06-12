@@ -10,12 +10,11 @@
 
 #product-page .info form {
     padding: 10px;
-    border: 1px solid;
-    margin: 10px 0px;
+    border-bottom: 2px solid whitesmoke;
 }
 
-#product-page span {
-    padding: 20px 0px;
+#product-page .code {
+    padding: 10px 0px;
 }
 
 #product-page .img img {
@@ -43,4 +42,123 @@
 #product-page button {
     margin: 10px 0px;
     cursor: pointer;
+}
+
+.color input {
+    display: none;
+}
+
+.color label {
+    border-radius: 50%;
+    display: inline-flex;
+    height: 30px;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.color label div {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    border-radius: 50%;
+    display: block;
+    font-size: 0px;
+}
+
+.color input:checked+label {
+    border: 1px solid;
+}
+
+.color span {
+    display: block;
+}
+
+.price-block {
+    border-bottom: 2px solid whitesmoke;
+    border-top: 2px solid whitesmoke;
+    padding: 10px 0px;
+}
+
+.price-block .discount {
+    background-color: rgb(221, 221, 221);
+    padding: 5px;
+}
+
+.size input {
+    display: none;
+}
+
+.size label {
+    height: 35px;
+    width: 35px;
+    display: inline-flex;
+    border: 1px solid;
+    justify-content: center;
+    align-items: center;
+}
+
+.size input:checked+label {
+    color: white;
+    background-color: black;
+}
+
+.quantity form {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.quantity .value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 0;
+    background: #eee;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.quantity .value-button:hover {
+    cursor: pointer;
+}
+
+.quantity form #decrease {
+    margin-right: -4px;
+    border-radius: 8px 0 0 8px;
+}
+
+.quantity form #increase {
+    margin-left: -4px;
+    border-radius: 0 8px 8px 0;
+}
+
+.quantity form #input-wrap {
+    margin: 0px;
+    padding: 0px;
+}
+
+.quantity input#number {
+    text-align: center;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 40px;
+}
+
+.quantity input[type=number]::-webkit-inner-spin-button,
+.quantity input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

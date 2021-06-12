@@ -16,6 +16,7 @@
     <script src="vendors/slick/slick.min.js"></script>
 
     <script src="resources/js/functions.js"></script>
+    <script src="resources/js/cart.js"></script>
 
 
 
@@ -26,7 +27,22 @@
 </head>
 
 <body class="scroll-hidden">
-    <div></div>
+    <div class="c-product temp">
+        <div>
+            <img src="resources/img/10cbf80bbc89450c9e9e2b733e55e968_bd01b557152f4a3591403abc1c120321_grande.png">
+        </div>
+        <div class="name">
+            <h3>Áo phông nam chất đẹp</h3>
+            <span class="size">XL</span>
+            <div class="amount">
+                <span class="count">1</span>
+                <span class="price">450.000đ</span>
+            </div>
+        </div>
+        <div>
+            <button>X</button>
+        </div>
+    </div>
     <div id="main-body">
         <header>
             <div class="max-width bg-whitesomke ta-center padding"><span>MIỄN PHÍ VẬN CHUYỂN ĐƠN HÀNG TỪ 1 TRIỆU</span></div>
@@ -41,7 +57,14 @@
                         <i class="fas fa-search"></i>
                         </button>
                         <button class="no-bd-btn">
-                        <i class="fas fa-shopping-bag"></i>
+                            <svg version="1.1" class="svg-cart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 27" style="enable-background:new 0 0 24 27;" xml:space="preserve">
+                                <g>
+                                    <path d="M0,6v21h24V6H0z M22,25H2V8h20V25z"></path>
+                                </g>
+                                <g>
+                                    <path d="M12,2c3,0,3,2.3,3,4h2c0-2.8-1-6-5-6S7,3.2,7,6h2C9,4.3,9,2,12,2z"></path>
+                                </g>
+                            </svg>
                         <span>0</span>
                         </button>
                     </div>
@@ -50,82 +73,82 @@
             <div id="main-menu">
                 <ul class="menu-bar">
                     <li class="menu-item">
-                        <span>Trang chủ</span>
+                        <a>Trang chủ</a>
                     </li>
                     <li class="menu-item drop-down-menu">
-                        <span>Đồ nam<i class="fa fa-chevron-down"></i></span>
+                        <a>Đồ nam<i class="fa fa-chevron-down"></i></a>
                         <ul class="drop-down-content">
                             <li class="slide-menu">
-                                <span>Áo</span>
+                                <a>Áo</a>
                                 <ul class="slide-content">
                                     <li>
-                                        <span>Áo phông</span>
+                                        <a>Áo phông</a>
                                     </li>
                                     <li>
-                                        <span>Áo Tanktop</span>
+                                        <a>Áo Tanktop</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="slide-menu">
-                                <span>Quần</span>
+                                <a>Quần</a>
                                 <ul class="slide-content">
                                     <li>
-                                        <span>Quần jean</span>
+                                        <a>Quần jean</a>
                                     </li>
                                     <li>
-                                        <span>Quẩn caro</span>
+                                        <a>Quẩn caro</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="slide-menu">
-                                <span>Giàu/dép</span>
+                                <a>Giàu/dép</a>
                                 <ul class="slide-content">
                                     <li>
-                                        <span>Giầy snaker</span>
+                                        <a>Giầy snaker</a>
                                     </li>
                                     <li>
-                                        <span>Giầy da</span>
+                                        <a>Giầy da</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="slide-menu">
-                                <span>Phụ kiện</span>
+                                <a>Phụ kiện</a>
                                 <ul class="slide-content">
                                     <li>
-                                        <span>Ví</span>
+                                        <a>Ví</a>
                                     </li>
                                     <li>
-                                        <span>Balo</span>
+                                        <a>Balo</a>
                                     </li>
                                     <li>
-                                        <span>Mũ</span>
+                                        <a>Mũ</a>
                                     </li>
                                     <li>
-                                        <span>Thắt lưng</span>
+                                        <a>Thắt lưng</a>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
                     <li class="menu-item">
-                        <span>Cửa hàng</span>
+                        <a>Cửa hàng</a>
                     </li>
                     <li class="menu-item">
-                        <span>Giới thiệu</span>
+                        <a>Giới thiệu</a>
                     </li>
                     <li class="menu-item drop-down-menu">
-                        <span>Tin tức<i class="fa fa-chevron-down"></i></span>
+                        <a>Tin tức<i class="fa fa-chevron-down"></i></a>
 
                     </li>
                     <li class="menu-item">
-                        <span>Sale đồ nam<i class="fa fa-chevron-down"></i></span>
+                        <a>Sale đồ nam<i class="fa fa-chevron-down"></i></a>
                     </li>
                     <li class="menu-item">
-                        <span>Tuyển dụng</span>
+                        <a>Tuyển dụng</a>
 
                     </li>
                     <li class="menu-item">
-                        <span>Bảng size</span>
+                        <a>Bảng size</a>
                     </li>
                 </ul>
             </div>

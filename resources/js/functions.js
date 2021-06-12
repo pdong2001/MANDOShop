@@ -1,14 +1,18 @@
 $(document).ready(function() {
+    $('.color input').change(function() {
+        $('.color .chose-color').html($('.color input:checked+label div').html());
+    });
+    $('.quantity input').change(function() {
+        if ($(this).val() == '' || Number($(this).val()) < 1) {
+            $(this).val('1');
+        }
+    });
     $('.drop-down-menu').hover(function() {
         $(this).find('.drop-down-content').slideDown('fast');
     }, function() {
         $(this).find('.drop-down-content').slideUp('fast');
     });
 
-    $('#product-page button').click(function() {
-        $('.search div button:last-child span').text(Number($('.search div button:last-child span').text()) + 1);
-        $('#cartbox .container .ctn').append(getProduct());
-    });
 
     $(window).scroll(function() {
         var wT = $(this).scrollTop();
@@ -63,7 +67,7 @@ $(document).ready(function() {
             }
         ]
     });
-    
+
     $('.coverlay, .right-nav .controller button').click(function() {
         $('.right-nav').animate({
             width: '0%'
@@ -90,4 +94,19 @@ function getProduct() {
     var product = $('.c-product.temp').clone(true);
     product.removeClass('temp');
     return product;
+}
+
+function increaseValue() {
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    document.getElementById('number').value = value;
+}
+
+function decreaseValue() {
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value--;
+    value < 1 ? value = 1 : '';
+    document.getElementById('number').value = value;
 }
