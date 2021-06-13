@@ -436,3 +436,30 @@ footer .infomation .info img {
 .search button:last-child {
     overflow: hidden;
 }
+
+.bill {
+    padding: 15px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a.pay {
+    background: #338dbc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    color: white;
+    padding: 20px 0px;
+    cursor: pointer;
+    font-size: 110%;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+a.pay:hover {
+    color: #338dbc;
+    background-color: white;
+    border: 1px solid;
+}

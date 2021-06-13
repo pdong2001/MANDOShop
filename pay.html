@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="resources/css/pay.css" rel="stylesheet" type="text/css">
+    <link href="resources/css/style.css" rel="stylesheet" type="text/css">
+    <link href="vendors/css/all.min.css" rel="stylesheet" type="text/css">
+    <script src="vendors/js/jquery-3.6.0.js"></script>
+    <script src="resources/js/functions.js"></script>
+    <script src="resources/js/cart.js"></script>
+    <script src="vendors/js/all.min.js"></script>
+    <script src="vendors/slick/slick.js"></script>
+
+    <title>MANDOShop | Thanh toán</title>
+</head>
+
+<body>
+    <div id="main">
+        <div class="left">
+            <h1 class="title">Thời trang MANDO</h1>
+            <div class="block">
+                <span class="title">
+                    Phương thức vận chuyển
+                </span>
+                <div class="input">
+                    <form>
+                        <input id="tpmt-1" type="radio" name="paymethod">
+                        <label for="tpmt-1">
+                            <div class="pay-method">
+                                <span>Chuyển phát nhanh</span>
+                            </div>
+                        </label>
+                        <input id="tpmt-2" type="radio" name="paymethod">
+                        <label for="tpmt-2">
+                            <div class="pay-method">
+                                <span>Giao hàng tiết kiệm</span>
+                            </div>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div class="block">
+                <span class="title">
+                    Phương thức thanh toán
+                </span>
+                <div class="input">
+                    <form>
+                        <input id="pmt-1" type="radio" name="paymethod">
+                        <label for="pmt-1">
+                            <div class="pay-method">
+                                <span>Thanh toán khi nhận hàng (COD)</span>
+                            </div>
+                        </label>
+                    </form>
+                </div>
+                <div class="flex jc-spbt ai-center">
+                    <a href="cart.html">
+                        <i class="fas fa-chevron-left"></i>
+                        <span>Trở lại giỏ hàng</span>
+                    </a>
+                    <a class="submit">
+                        <span>Hoàn tất</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="container">
+            </div>
+            <div class="bill">
+                <div class="row">
+                    <span>Tạm tính</span>
+                    <div>
+                        <span class="number">0</span>
+                        <span>đ</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <span>Phí vận chuyển</span>
+                    <div>
+                        <span class="number">-</span>
+                        <span>đ</span>
+                    </div>
+                </div>
+                <div class="total row">
+                    <span>Tổng cộng</span>
+                    <div>
+                        <span class="number">0</span>
+                        <span>đ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-product temp">
+            <div class="flex">
+                <div class="img">
+                    <img src="resources/img/10cbf80bbc89450c9e9e2b733e55e968_bd01b557152f4a3591403abc1c120321_grande.png">
+                    <span class="count">1</span>
+                </div>
+                <div class="name">
+                    <h3>Áo phông nam chất đẹp</h3>
+                    <span class="info">XL/Đen</span>
+                    <span class="price">450.000đ</span>
+                </div>
+            </div>
+            <div>
+                <button><i class="fas fa-trash"></i>
+                    <san>Xóa</san></button>
+            </div>
+        </div>
+    </div>
+    <script>
+        payCart();
+        $(document).ready(() => {
+            $('.c-product button').click(function() {
+                payCart(listProductBlock);
+            });
+        });
+    </script>
+</body>
+
+</html>

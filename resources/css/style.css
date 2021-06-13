@@ -352,3 +352,7 @@
 .slick-current {
     opacity: 1;
 }
+
+.temp {
+    display: none !important;
+}

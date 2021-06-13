@@ -17,7 +17,7 @@ function ProductBlock(imgLink, name, size, price, amount, color) {
         var temp = $('.c-product.temp').clone(true);
         temp.removeClass('temp');
         temp.find('img').attr('src', this.imgLink);
-        temp.find('.size').html(this.color + '/' + this.size);
+        temp.find('.info').html(this.color + '/' + this.size);
         temp.find('h3').html(this.name);
         temp.find('.count').html(this.amount);
         temp.find('.price').html(this.price);
@@ -55,23 +55,43 @@ function addToCart(e) {
     refreshCart(listProductBlock);
 }
 
-function refreshCart(list) {
+function moneyFormat(val) {
+    var strVal = String(val).replaceAll('.', '');
+    for (var index = strVal.length - 3; index > 0; index -= 3) {
+        strVal = [strVal.slice(0, index), '.', strVal.slice(index)].join('');
+    }
+    return strVal;
+}
+
+function numberFormat(val) {
+    var rs = val.replaceAll('.', '').replaceAll(',', '');
+    while (rs.match(/\W+/i) != null) {
+        rs = rs.replaceAll(rs.match(/\W+/i)[0], '');
+    }
+    return Number(rs);
+}
+
+function refreshCart(list, container = '#cartbox .ctn') {
     $('.search button:last-child span').html('0');
-    $('#cartbox .ctn').empty();
+    $(container).empty();
+    var total = 0;
+    var count = 0;
     for (let index = 0; index < list.length; index++) {
         var obj = new ProductBlock(list[index].imgLink, list[index].name, list[index].size, list[index].price, list[index].amount, list[index].color)
         const element = obj.toElement();
-        $('#cartbox .ctn').append(element);
-        const count = $('.search button:last-child span');
-        count.html(Number(count.html()) + 1);
+        $(container).append(element);
+        count += 1;
+        total += Number(obj.amount) * numberFormat(list[index].price);
     }
+    $('.search button:last-child span').html(count);
+    $('.bill .total span.number').html(moneyFormat(total));
 }
 
 $(document).ready(function() {
     refreshCart(listProductBlock);
     $('.c-product button').click(function() {
-        var parent = $(this).parent().parent().element;
-        listProductBlock.splice($('#cartbox .ctn .c-product').index(parent), 1);
+        var parent = $(this).parent().parent().get(0);
+        listProductBlock.splice($(parent).parent().index(parent), 1);
         localStorage.removeItem('mandocart');
         localStorage.setItem('mandocart', JSON.stringify(listProductBlock));
         refreshCart(listProductBlock);
@@ -92,10 +112,15 @@ function refreshList() {
 }
 
 setInterval(function() {
-    var localData = JSON.parse(localStorage.getItem('mandocart'));
-    if (listProductBlock.length !=
-        (localData == null ? [] : localData.length)) {
+    var localData = localStorage.getItem('mandocart');
+    if (JSON.stringify(listProductBlock) != localData) {
         refreshList();
         refreshCart(listProductBlock);
+        payCart();
     }
 }, 1000);
+
+function payCart() {
+    refreshCart(listProductBlock, '#main .right .container');
+    $('.bill .row:first-child .number').html($('.bill .total span.number').html());
+}
