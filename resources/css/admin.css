@@ -1,0 +1,385 @@
+.container {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+label {
+    user-select: none;
+}
+
+.container .left {
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(300deg, rgb(161, 236, 255), rgb(51, 141, 179)) no-repeat;
+}
+
+.container .left * {
+    color: white;
+    text-decoration: none;
+}
+
+.container .right {
+    width: 80%;
+    height: 100%;
+}
+
+.left .menu {
+    margin-top: 10%;
+}
+
+.left .menu-item a {
+    display: block;
+    padding: 1em 15%;
+    font-size: 125%;
+}
+
+.left .menu-item:hover a {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.left .menu-item svg {
+    margin-right: 10px;
+    width: 30px;
+}
+
+.right .control {
+    margin: 30px 20%;
+}
+
+.right .ctn {
+    padding: 10px;
+    margin: 20px 0px;
+    border: 1px solid;
+}
+
+.product,
+.order {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgb(199, 199, 199);
+    align-items: center;
+    padding: 10px;
+}
+
+.product .img {
+    height: 100%;
+    width: 100px;
+}
+
+.product .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid rgb(219, 219, 219);
+}
+
+.product .info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.product .info :not(:last-child, :first-child) {
+    margin: 5px 0px;
+}
+
+.product .info .price {
+    opacity: 1;
+    color: red;
+}
+
+.product .info h3 {
+    margin-bottom: 5px;
+}
+
+.product .info span {
+    opacity: 0.6;
+}
+
+.product div:last-child {
+    padding-right: 10px;
+}
+
+.ctn :is(button, label) {
+    padding: 10px 15px;
+    border: 1px solid #338db3;
+    color: #338db3;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.ctn input[type='checkbox'] {
+    display: none;
+}
+
+.ctn :is(button, label):hover {
+    background-color: #338db3;
+    color: white;
+}
+
+.product .info input::-webkit-inner-spin-button,
+.product .info input::-webkit-outer-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+}
+
+.product .info input {
+    outline: none;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+}
+
+.filter div:not(:is(:first-child, :last-child)) {
+    margin: 0px 10px;
+}
+
+button {
+    padding: 5px 15px;
+    border: 1px solid rgb(51, 141, 179);
+    background-color: white;
+    color: #338db3;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    color: white;
+    background-color: #338db3;
+}
+
+.ctn .product:not(:last-child) {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.ctn .product:not(:first-child) {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.right h1 {
+    font-size: 175%;
+    color: rgb(51, 141, 179);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    user-select: none;
+    margin-top: 20px;
+}
+
+.popup {
+    width: 100vw;
+    height: 100vh;
+}
+
+#product-edit .panel {
+    padding: 20px;
+    background-color: white;
+}
+
+#product-edit .img-input {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#product-edit .input .controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+#product-edit .input .controls div {
+    display: flex;
+    padding: 15px 0px;
+}
+
+#product-edit :is(input[type="text"], input[type="number"], textarea) {
+    display: block;
+    outline-color: #338dbc;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(196, 196, 196);
+    resize: none;
+}
+
+#product-edit input[type="number"]::-webkit-inner-spin-button,
+#product-edit input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+textarea {
+    max-height: 100%;
+    min-height: 70%;
+    height: auto;
+    width: 100%;
+}
+
+#product-edit .contact input[type="text"]:first-child {
+    width: 100%;
+}
+
+#product-edit .input div div:not(:last-child) {
+    margin-right: 15px;
+}
+
+#product-edit input[type='text']:not(:last-child) {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+#product-edit .contact {
+    display: flex;
+}
+
+#product-edit .input-block>form {
+    width: 50%;
+    display: flex;
+}
+
+#product-edit .input div div div {
+    padding: 0px !important;
+}
+
+#product-edit .input .input-rs {
+    width: 100%;
+    padding: 0px !important;
+    border-radius: 5px;
+    border: 1px solid #338db3;
+    overflow-y: auto;
+}
+
+#product-edit .input-block form:first-child {
+    margin-right: 20px;
+}
+
+#product-edit .input-block input[type="text"] {
+    width: 100%;
+}
+
+.item {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #338db3;
+    cursor: default;
+}
+
+.item button {
+    padding: 0px 5px;
+}
+
+.item span {
+    padding: 5px 10px;
+}
+
+.item .color {
+    display: block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.input-rs::-webkit-scrollbar-thumb {
+    background: none;
+}
+
+.input-rs::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.input-rs:hover::-webkit-scrollbar-thumb {
+    background: rgb(202, 202, 202);
+    border-radius: 10px;
+}
+
+#size-input .item span {
+    text-transform: uppercase;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+button svg {
+    min-width: 17px;
+}
+
+.order :is(button, label):not(:last-child) {
+    margin-right: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .input-block {
+        flex-direction: column;
+        margin: 0px !important;
+    }
+    .input-block>form {
+        width: 100% !important;
+        margin: 10px 0px !important;
+    }
+    .contact {
+        flex-direction: column;
+        margin: 0px !important;
+    }
+    .contact>div:first-child {
+        margin-bottom: 20px;
+    }
+    .control {
+        margin: 30px !important;
+    }
+    .filter {
+        display: block;
+    }
+    .filter>* {
+        display: inline-block;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .left {
+        width: 100% !important;
+        height: fit-content !important;
+    }
+    .left .menu {
+        margin: 10px;
+    }
+    .menu ul {
+        display: flex;
+        height: fit-content !important;
+    }
+    .menu ul li {
+        display: inline-block;
+        width: 100%;
+        height: fit-content;
+    }
+    .menu ul a {
+        width: max-content;
+        font-size: 3vw !important;
+    }
+}

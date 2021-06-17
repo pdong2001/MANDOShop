@@ -13,10 +13,10 @@ $(document).ready(function() {
         $(this).find('.drop-down-content').slideUp('fast');
     });
 
-
     $(window).scroll(function() {
         var wT = $(this).scrollTop();
         var mT = $('#main-menu').height() + 120;
+        var top = 15;
         if (wT > mT) {
             $('#main-menu').css({
                 'position': 'fixed',
@@ -24,10 +24,13 @@ $(document).ready(function() {
                 'top': '0px',
                 'width': '100%'
             });
+            if ($(window).width() <= 768) {
+                top = Number($('#main-menu').height());
+            }
             $('.search div').css({
                 'position': 'fixed',
                 'background-color': 'white',
-                'top': '15px',
+                'top': top + 'px',
             });
         } else {
             $('#main-menu').css({
@@ -47,21 +50,22 @@ $(document).ready(function() {
     $(".center").slick({
         dots: true,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 5,
         slidesToScroll: 1,
         centerMode: true,
         responsive: [{
-                breakpoint: 600,
+                breakpoint: 768,
                 settings: {
-                    slidesToShow: 2,
+                    arrows: false,
+                    slidesToShow: 1,
                     slidesToScroll: 1
                 }
             },
             {
-                breakpoint: 400,
+                breakpoint: 1080,
                 settings: {
                     arrows: false,
-                    slidesToShow: 1,
+                    slidesToShow: 3,
                     slidesToScroll: 1
                 }
             }
@@ -73,20 +77,35 @@ $(document).ready(function() {
             width: '0%'
         });
         $('.coverlay').hide();
+        $('body').addClass('scroll-hidden');
     });
     $('.search button:first-child').click(function() {
         $('#searchbox').show();
-        $('#searchbox').animate({
-            width: '30%'
-        });
+        if ($(window).width() > 768) {
+            $('#searchbox').animate({
+                width: '30%'
+            });
+        } else {
+            $('#searchbox').animate({
+                width: '50%'
+            });
+        }
         $('.coverlay').show();
+        $('body').removeClass('scroll-hidden');
     })
     $('.search button:last-child').click(function() {
         $('#cartbox').show();
-        $('#cartbox').animate({
-            width: '30%'
-        });
+        if ($(window).width() > 768) {
+            $('#cartbox').animate({
+                width: '30%'
+            });
+        } else {
+            $('#cartbox').animate({
+                width: '50%'
+            });
+        }
         $('.coverlay').show();
+        $('body').removeClass('scroll-hidden');
     })
 });
 

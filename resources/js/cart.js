@@ -13,8 +13,8 @@ function ProductBlock(imgLink, name, size, price, amount, color) {
         amount: this.amount,
         color: this.color
     }
-    this.toElement = function() {
-        var temp = $('.c-product.temp').clone(true);
+    this.toElement = function(select) {
+        var temp = $(select).clone(true);
         temp.removeClass('temp');
         temp.find('img').attr('src', this.imgLink);
         temp.find('.info').html(this.color + '/' + this.size);
@@ -71,14 +71,14 @@ function numberFormat(val) {
     return Number(rs);
 }
 
-function refreshCart(list, container = '#cartbox .ctn') {
+function refreshCart(list, container = '#cartbox .ctn', select = '#cartbox .c-product.temp') {
     $('.search button:last-child span').html('0');
     $(container).empty();
     var total = 0;
     var count = 0;
     for (let index = 0; index < list.length; index++) {
         var obj = new ProductBlock(list[index].imgLink, list[index].name, list[index].size, list[index].price, list[index].amount, list[index].color)
-        const element = obj.toElement();
+        const element = obj.toElement(select);
         $(container).append(element);
         count += 1;
         total += Number(obj.amount) * numberFormat(list[index].price);
@@ -121,6 +121,6 @@ setInterval(function() {
 }, 1000);
 
 function payCart() {
-    refreshCart(listProductBlock, '#main .right .container');
+    refreshCart(listProductBlock, '#main .right .container', '#main .c-product.temp');
     $('.bill .row:first-child .number').html($('.bill .total span.number').html());
 }

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANDOShop | Admin - DashBoard</title>
+
+    <link href="../resources/css/style.css" rel="stylesheet" type="text/css">
+    <link href="../resources/css/admin.css" rel="stylesheet">
+
+    <script src="../vendors/js/jquery-3.6.0.js"></script>
+    <script src="../vendors/js/all.min.js"></script>
+    <script src="../vendors/slick/slick.min.js"></script>
+
+    <script src="../resources/js/cart.js"></script>
+    <script src="../resources/js/functions.js"></script>
+
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="left">
+                <div class="menu">
+                    <ul>
+                        <li class="root menu-item">
+                            <span><a href="" class="active"><i class="fas fa-home"></i><span>Trang chủ</span></a>
+                            </span>
+                        </li>
+                        <li class="root menu-item">
+                            <span><a href="product.html"><i class="fas fa-tshirt"></i><span>Sản phẩm</span></a>
+                            </span>
+                        </li>
+                        <li class="root menu-item">
+                            <span><a href="order.html"><i class="fas fa-file-invoice-dollar"></i><span>Đơn đặt hàng</span></a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right scroll-hidden">
+                <div class="panel" id="home">
+                    <h1>Trang chủ</h1>
+                    <div class="control">
+                        <div class="mg-bottom flex">
+                            <label class="mg-right" for="topbar-input" class="title">Top bar:</label>
+                            <input class="block" type="text" name="topbar" id="topbar-input">
+                        </div>
+                        <span class="title">Ảnh bìa</span>
+                        <div>
+                            <label for="wall-input">Chọn ảnh bìa:</label>
+                            <input type="file" accept=".png,.jpg,.jpeg id=" wall-input ">
+                        </div>
+                    </div>
+                    <div class="control ">
+                        <span class="title ">Slide giảm giá</span>
+                        <div class="filter ">
+                            <div>
+                                <input type="text " name="filter " placeholder="Tìm kiếm ">
+                            </div>
+                            <div>
+                                <select>
+                                <option>Tất cả</option>
+                                <option>Áo</option>
+                                <option>Quần</option>
+                                <option>Giầy</option>
+                                <option>Phụ kiện</option>
+                            </select>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="showed ">
+                                <label for="showed ">Đã hiển thị</label>
+                            </div>
+                            <button>
+                                Lọc
+                            </button>
+                        </div>
+                        <div class="ctn ">
+                            <div class="product ">
+                                <div class="flex ">
+                                    <div class="img ">
+                                        <img src="../resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg ">
+                                    </div>
+                                    <div class="info ">
+                                        <h3>Sản phẩm 1</h3>
+                                        <span class="price ">220.000đ</span>
+                                        <input type="number " class="discount " placeholder="Giảm giá ">
+                                        <span>
+                                        <span class="size ">S/M/L/XL/XXL</span> -
+                                        <span class="color ">Đỏ/Đen/Trắng</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <input id="sl-pr-1 " type="checkbox">
+                                    <label for="sl-pr-1 ">
+                                        <i class="far fa-eye "></i>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="product ">
+                                <div class="flex ">
+                                    <div class="img ">
+                                        <img src="../resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg ">
+                                    </div>
+                                    <div class="info ">
+                                        <h3>Sản phẩm 1</h3>
+                                        <span class="price ">220.000đ</span>
+                                        <input type="number " class="discount " placeholder="Giảm giá ">
+                                        <span>
+                                        <span class="size ">S/M/L/XL/XXL</span> -
+                                        <span class="color ">Đỏ/Đen/Trắng</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <input id="sl-pr-0 " type="checkbox">
+                                    <label for="sl-pr-0 ">
+                                        <i class="far fa-eye "></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control ">
+                        <span class="title ">Sản phẩm bán chạy</span>
+                        <div class="filter ">
+                            <div>
+                                <input type="text " name="filter " placeholder="Tìm kiếm ">
+                            </div>
+                            <div>
+                                <select>
+                                <option>Tất cả</option>
+                                <option>Áo</option>
+                                <option>Quần</option>
+                                <option>Giầy</option>
+                                <option>Phụ kiện</option>
+                            </select>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="showed ">
+                                <label for="showed ">Đã hiển thị</label>
+                            </div>
+                            <button>
+                                Lọc
+                            </button>
+                        </div>
+                        <div class="ctn ">
+                            <div class="product ">
+                                <div class="flex ">
+                                    <div class="img ">
+                                        <img src="../resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg ">
+                                    </div>
+                                    <div class="info ">
+                                        <h3>Sản phẩm 1</h3>
+                                        <span class="price ">220.000đ</span>
+                                        <input type="number " class="discount " placeholder="Giảm giá ">
+                                        <span>
+                                        <span class="size ">S/M/L/XL/XXL</span> -
+                                        <span class="color ">Đỏ/Đen/Trắng</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <input id="sh-pr-0 " type="checkbox">
+                                    <label for="sh-pr-0 ">
+                                        <i class="far fa-eye "></i>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="product ">
+                                <div class="flex ">
+                                    <div class="img ">
+                                        <img src="../resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg ">
+                                    </div>
+                                    <div class="info ">
+                                        <h3>Sản phẩm 1</h3>
+                                        <span class="price ">220.000đ</span>
+                                        <input type="number " class="discount " placeholder="Giảm giá ">
+                                        <span>
+                                        <span class="size ">S/M/L/XL/XXL</span> -
+                                        <span class="color ">Đỏ/Đen/Trắng</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <input id="sh-pr-1 " type="checkbox">
+                                    <label for="sh-pr-1 ">
+                                        <i class="far fa-eye "></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        $('.product div:last-child input[type=checkbox]').change(function(e) {
+            if (this.checked) {
+                $(this).next().html('<i class="far fa-eye-slash "></i>');
+            } else {
+                $(this).next().html('<i class="far fa-eye "></i>');
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -5,6 +5,11 @@
     height: 100vh;
     padding: 0px 10%;
     background-color: white;
+    z-index: -1;
+}
+
+body {
+    height: fit-content;
 }
 
 #main :is(.left, .right) {
@@ -191,4 +196,25 @@ input[type="radio"] {
 
 #main input:checked+label div {
     border: 2px solid #338dbc;
+}
+
+#main .right>div.container {
+    padding: 10px 0px;
+}
+
+@media only screen and (max-width: 768px) {
+    .flex-container :is(.left, .right) {
+        height: 50% !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+    #main .right {
+        border: none;
+    }
+    #main .right>div.container {
+        height: 100% !important;
+    }
+    #main {
+        min-height: calc(100vh + 150px) !important;
+    }
 }

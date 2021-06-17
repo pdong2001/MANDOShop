@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANDOShop | Admin - DashBoard</title>
+
+    <link href="../resources/css/style.css" rel="stylesheet" type="text/css">
+    <link href="../resources/css/admin.css" rel="stylesheet">
+
+    <script src="../vendors/js/jquery-3.6.0.js"></script>
+    <script src="../vendors/js/all.min.js"></script>
+
+    <script src="../resources/js/cart.js"></script>
+
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="left">
+                <div class="menu">
+                    <ul>
+                        <li class="root menu-item">
+                            <span><a href="Home.html"><i class="fas fa-home"></i><span>Trang chủ</span></a>
+                            </span>
+                        </li>
+                        <li class="root menu-item">
+                            <span><a href="" class="active"><i class="fas fa-tshirt"></i><span>Sản phẩm</span></a>
+                            </span>
+                        </li>
+                        <li class="root menu-item">
+                            <span><a href="order.html"><i class="fas fa-file-invoice-dollar"></i><span>Đơn đặt hàng</span></a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right scroll-hidden">
+                <div class="panel" id="home">
+                    <h1>Sản phẩm</h1>
+                    <div class="control">
+                        <span class="title">Danh sách sản phẩm</span>
+                        <div class="filter">
+                            <div>
+                                <input type="text" name="filter" placeholder="Tìm kiếm">
+                            </div>
+                            <div>
+                                <select>
+                                <option>Tất cả</option>
+                                <option>Áo</option>
+                                <option>Quần</option>
+                                <option>Giầy</option>
+                                <option>Phụ kiện</option>
+                            </select>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="showed">
+                                <label for="showed">Đã hiển thị</label>
+                            </div>
+                            <button class="mg-right">
+                                Lọc
+                            </button>
+                            <button class="mg-left add">
+                                Thêm
+                            </button>
+                        </div>
+                        <div class="ctn">
+                            <div class="product">
+                                <div class="flex">
+                                    <div class="img">
+                                        <img src="../resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                                    </div>
+                                    <div class="info">
+                                        <h3>Sản phẩm 1</h3>
+                                        <span class="price">220.000đ</span>
+                                        <input type="number" class="discount" placeholder="Giảm giá">
+                                        <span>
+                                        <span class="size">S/M/L/XL/XXL</span> -
+                                        <span class="color">Đỏ/Đen/Trắng</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <input id="pr-0" type="checkbox">
+                                    <label for="pr-0">
+                                        <i class="far fa-eye"></i>
+                                    </label>
+                                    <button class="edit-button">
+                                        <i class="far fa-edit"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="flex">
+                                    <div class="img">
+                                        <img src="../resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                                    </div>
+                                    <div class="info">
+                                        <h3>Sản phẩm 1</h3>
+                                        <span class="price">220.000đ</span>
+                                        <input type="number" class="discount" placeholder="Giảm giá">
+                                        <span>
+                                        <span class="size">S/M/L/XL/XXL</span> -
+                                        <span class="color">Đỏ/Đen/Trắng</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <input id="pr-1" type="checkbox">
+                                    <label for="pr-1">
+                                        <i class="far fa-eye"></i>
+                                    </label>
+                                    <button class="edit-button">
+                                        <i class="far fa-edit"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="product-edit" class="popup center">
+            <div class="panel fill">
+                <button id="product-edit-close-btn" style="position: absolute; right: 5px; top: 5px;">
+                        X
+                    </button>
+                <div class="img-input">
+                    <label for="img-input">
+                            <span>Chọn ảnh sản phẩm : </span>
+                        </label>
+                    <input id="img-input" type="file" name="product-img" accept="image/*">
+                </div>
+                <div>
+                    <div class="input">
+                        <div class="controls">
+                            <div class="contact">
+                                <div style="width: 100%;">
+                                    <input id="email" type="text" name="info" placeholder="Tên sản phẩm">
+                                </div>
+                                <div class="flex" style="width:auto;">
+                                    <div class="max-width">
+                                        <input class="max-width" type="number" name="price" id="price" placeholder="Giá bán">
+                                    </div>
+                                    <div class="max-width">
+                                        <input class="max-width" id="phone" type="text" name="info" placeholder="Mã sản phẩm">
+                                    </div>
+                                    <div>
+                                        <select>
+                                            <option>Áo phông</option>
+                                            <option>Áo sơ mi trơn</option>
+                                            <option>Áo Tanktop</option>
+                                            <option>Quần</option>
+                                            <option>Balo</option>
+                                            <option>Giầy</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-block">
+                                <form id="size-input">
+                                    <div class="max-width">
+                                        <input type="text" name="info" placeholder="Kích thước" required>
+                                        <button type="submit">
+                                                Thêm
+                                            </button>
+                                    </div>
+                                    <div class="input-rs">
+                                        <div class="item temp">
+                                            <span class="name"></span>
+                                            <button type="button">x</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <form id="color-input">
+                                    <div class="max-width">
+                                        <input type="text" name="info" placeholder="Màu sắc" required>
+                                        <input type="color" name="info" style="height: 100%;">
+                                        <button type="submit">
+                                            Thêm
+                                        </button>
+                                    </div>
+
+                                    <div class="input-rs">
+                                        <div class="item temp">
+                                            <span class="name">Đen</span>
+                                            <span class="color"></span>
+                                            <button type="button">x</button>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                            <textarea id="description" name="info" placeholder="Mô tả sản phẩm" rows='20'></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        $('.product div:last-child input[type=checkbox]').change(function(e) {
+            if (this.checked) {
+                $(this).next().html('<i class="far fa-eye-slash"></i>');
+            } else {
+                $(this).next().html('<i class="far fa-eye"></i>');
+            }
+        });
+        $('#product-edit-close-btn').click(function() {
+            $('#product-edit').hide();
+        });
+        $('.add, .edit-button').click(function() {
+            $('#product-edit').show();
+        });
+        $('.input-rs button').click(function(e) {
+            $(this).parent().remove();
+        });
+        $('#size-input').submit(function(e) {
+            e.preventDefault();
+            var tempEle = $(this).find('.temp').clone(true);
+            tempEle.removeClass('temp');
+            tempEle.find('.name').html($(this).find('input[type=text]').val());
+            $(this).find('.input-rs').append(tempEle);
+            $(this).find('input[type=text]').val('');
+        });
+        $('#color-input').submit(function(e) {
+            e.preventDefault();
+            var tempEle = $(this).find('.temp').clone(true);
+            tempEle.removeClass('temp');
+            tempEle.find('.name').html($(this).find('input[type=text]').val());
+            $(this).find('.input-rs').append(tempEle);
+            tempEle.find('.color').css('background-color', $(this).find('input[type=color]').val());
+            $(this).find('input[type=text]').val('');
+        });
+    </script>
+</body>
+
+</html>

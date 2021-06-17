@@ -1,0 +1,15 @@
+.bar {
+    height: 50px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+}
+
+.bar * {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.bar a:hover {
+    color: aqua;
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANDOShop | Admin - DashBoard</title>
+
+    <link href="../resources/css/style.css" rel="stylesheet" type="text/css">
+    <link href="../resources/css/admin.css" rel="stylesheet">
+
+    <script src="../vendors/js/jquery-3.6.0.js"></script>
+    <script src="../vendors/js/all.min.js"></script>
+
+    <script src="../resources/js/cart.js"></script>
+
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="left">
+                <div class="menu">
+                    <ul>
+                        <li class="root menu-item">
+                            <span><a href="Home.html"><i class="fas fa-home"></i><span>Trang chủ</span></a>
+                            </span>
+                        </li>
+                        <li class="root menu-item">
+                            <span><a href="product.html"><i class="fas fa-tshirt"></i><span>Sản phẩm</span></a>
+                            </span>
+                        </li>
+                        <li class="root menu-item">
+                            <span><a href="" class="active"><i class="fas fa-file-invoice-dollar"></i><span>Đơn đặt hàng</span></a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right scroll-hidden">
+                <div class="panel" id="home">
+                    <h1>Sản phẩm</h1>
+                    <div class="control">
+                        <span class="title">Danh sách sản phẩm</span>
+                        <div class="filter">
+                            <div>
+                                <input type="text" name="filter" placeholder="Tìm kiếm">
+                            </div>
+                            <div>
+                                <select>
+                                <option>Tất cả</option>
+                                <option>Áo</option>
+                                <option>Quần</option>
+                                <option>Giầy</option>
+                                <option>Phụ kiện</option>
+                            </select>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="showed">
+                                <label for="showed">Đã hiển thị</label>
+                            </div>
+                            <button class="mg-right">
+                                Lọc
+                            </button>
+                            <button class="mg-left add">
+                                Hoàn tất
+                            </button>
+                        </div>
+                        <div class="ctn">
+                            <div class="order">
+                                <div class="info-container">
+                                    <span class="info">
+                                        <span>
+                                            Tên khách hàng: 
+                                        </span>
+                                    <span class="name">
+                                            Nguyễn Văn A
+                                        </span>
+                                    </span>
+                                    <span class="info">
+                                        <span>
+                                            Địa chỉ:
+                                        </span>
+                                    <span class="address">
+                                            Phố A - Phường B - Thành Phố C
+                                        </span>
+                                    </span>
+                                    <span class="info">
+                                        <span>
+                                            Email: 
+                                        </span>
+                                    <span class="name">
+                                            
+                                        </span>
+                                    </span>
+                                    <span class="info">
+                                        <span>
+                                            Số điện thoại
+                                        </span>
+                                    <span class="address">
+                                            0123456789
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="info-container">
+                                    <span class="info">
+                                        <span>
+                                            Số mặt hàng:
+                                        </span>
+                                    <span class="name">
+                                            3
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="flex">
+                                    <input id="kh-0" type="checkbox">
+                                    <label for="kh-0">
+                                            <i class="far fa-square"></i>
+                                        </label>
+                                    <button class="edit-button">
+                                        <i class="fas fa-info"></i>
+                                        </button>
+                                    <button class="del">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="product-edit" class="popup center">
+            <div class="panel fill">
+                <button id="product-edit-close-btn" style="position: absolute; right: 5px; top: 5px;">
+                    X
+                </button>
+                <button style="position: absolute; right: 50%; bottom: 5px;">
+                    Hoàn tất
+                </button>
+                <div class="ctn">
+                    <div class="product">
+                        <div class="flex">
+                            <div class="img">
+                                <img src="../resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                            </div>
+                            <div class="info">
+                                <h3>Sản phẩm 1</h3>
+                                <span class="price">220.000đ</span>
+                                <span>
+                                    <span>Số lượng:</span>
+                                <span class="count">1</span>
+                                </span>
+                                <span>
+                                <span class="size">S</span> -
+                                <span class="color">Trắng</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <input id="pr-0" type="checkbox">
+                            <label for="pr-0">
+                                <i class="far fa-square"></i>
+                            </label>
+                            <button class="del">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="flex">
+                            <div class="img">
+                                <img src="../resources/img/144141849_3786088154763902_3489084516174986201_o_6fa9ee8caec94ad0a4c563cd8b43de9b_grande.jpg">
+                            </div>
+                            <div class="info">
+                                <h3>Sản phẩm 1</h3>
+                                <span class="price">220.000đ</span>
+                                <span>
+                                    <span>Số lượng:</span>
+                                <span class="count">1</span>
+                                </span>
+                                <span>
+                                <span class="size">S</span> -
+                                <span class="color">Trắng</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <input id="pr-1" type="checkbox">
+                            <label for="pr-1">
+                                <i class="far fa-square"></i>
+                            </label>
+                            <button class="del">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        $('.ctn input[type=checkbox]').change(function(e) {
+            if (this.checked) {
+                $(this).next().html('<i class="far fa-check-square"></i>');
+            } else {
+                $(this).next().html('<i class="far fa-square"></i>');
+            }
+        });
+        $('#product-edit-close-btn').click(function() {
+            $('#product-edit').hide();
+        });
+        $('.add, .edit-button').click(function() {
+            $('#product-edit').show();
+        });
+        $('.input-rs button').click(function(e) {
+            $(this).parent().remove();
+        });
+        $('#size-input').submit(function(e) {
+            e.preventDefault();
+            var tempEle = $(this).find('.temp').clone(true);
+            tempEle.removeClass('temp');
+            tempEle.find('.name').html($(this).find('input[type=text]').val());
+            $(this).find('.input-rs').append(tempEle);
+            $(this).find('input[type=text]').val('');
+        });
+        $('#color-input').submit(function(e) {
+            e.preventDefault();
+            var tempEle = $(this).find('.temp').clone(true);
+            tempEle.removeClass('temp');
+            tempEle.find('.name').html($(this).find('input[type=text]').val());
+            $(this).find('.input-rs').append(tempEle);
+            tempEle.find('.color').css('background-color', $(this).find('input[type=color]').val());
+            $(this).find('input[type=text]').val('');
+        });
+        $('button.del').click(function() {
+            $(this).parent().parent().remove();
+        })
+    </script>
+</body>
+
+</html>

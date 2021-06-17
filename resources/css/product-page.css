@@ -10,7 +10,7 @@
 
 #product-page .info form {
     padding: 10px;
-    border-bottom: 2px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
 }
 
 #product-page .code {
@@ -75,8 +75,8 @@
 }
 
 .price-block {
-    border-bottom: 2px solid whitesmoke;
-    border-top: 2px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+    border-top: 1px solid whitesmoke;
     padding: 10px 0px;
 }
 
@@ -96,6 +96,10 @@
     border: 1px solid;
     justify-content: center;
     align-items: center;
+}
+
+.size label:not(:last-child) {
+    margin-right: 5px;
 }
 
 .size input:checked+label {
